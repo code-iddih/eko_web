@@ -31,6 +31,45 @@ h1, h2, h3,h4, h5, h6,
     height: auto; 
 }
 
+/* Landing Page animation */
+/* Keyframe for upward movement with wider range */
+@keyframes moveRandomly {
+    0% {
+      transform: translate(var(--random-x), var(--random-y)); /* Start at random position */
+    }
+    100% {
+      transform: translate(var(--random-x2), var(--random-y2)); /* End at another random position, extended vertically */
+    }
+  }
+  
+  /* Style for the container holding the dots */
+  #hero .dots-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Hide any overflow from animated dots */
+    z-index: -1; /* Ensure dots are behind the content */
+  }
+  
+  /* Style for individual dots */
+  #hero .dot {
+    position: absolute;
+    width: var(--dot-size); /* Random dot size */
+    height: var(--dot-size);
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.7; /* Slight transparency for star effect */
+    animation: moveRandomly 120s infinite linear; /* Slower movement (120 seconds) */
+  }
+  
+  /* Ensures hero content is on top */
+  #hero .container {
+    position: relative;
+    z-index: 1; /* Ensures content is above the dots */
+  }
+
 a {
     text-decoration: none;
     color: var(--c-brand);
