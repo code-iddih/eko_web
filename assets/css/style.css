@@ -1,5 +1,5 @@
 /* FONTS */
-@import url(../css/clash-display.css);
+@import url(../css/inter.css);
 
 /* VARIABLES */
 :root {
@@ -8,8 +8,8 @@
     --c-brand-light: #6970dd;
     --c-brand-rgb: 78, 87, 212;
     --c-body: #727272;
-    --font-base: "ClashDisplay", sans-serif;
-    --box-shadow: 0px 15px 25px rgba(0,0,0,0.08);
+    --font-base: "Inter", sans-serif; 
+    --box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.08);
     --transition: all 0.5s ease;
 }
 
