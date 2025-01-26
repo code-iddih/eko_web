@@ -348,12 +348,12 @@ footer .line {
     width: 40px;
     height: 4px;
     background-color: var(--c-brand);
-    margin-top: 12px;
+    margin-top:12px;
     margin-bottom: 24px;
 }
 
 .logo-footer {
-    width: 100px; 
+    width: 150px; 
     height: auto; 
 }
 
