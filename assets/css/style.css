@@ -319,12 +319,16 @@ img {
 
 /* FOOTER */
 footer {
-    padding-top: 120px;
+    padding-top: 60px;
 }
 
 .footer-top {
     padding-bottom: 40px;
     border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.col-lg-3:first-child {
+    margin-top: 21px;
 }
 
 .footer-bottom {
@@ -348,13 +352,14 @@ footer .line {
     width: 40px;
     height: 4px;
     background-color: var(--c-brand);
-    margin-top:12px;
+    margin-top:8px;
     margin-bottom: 24px;
 }
 
 .logo-footer {
     width: 150px; 
     height: auto; 
+    margin-bottom: 0px;
 }
 
 .social-icons a {
