@@ -18,8 +18,14 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
+      - name: Set up Docker Image Tag
+        run: echo "IMAGE_TAG=codeiddih/my-static-site:$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+
       - name: Build Docker Image
-        run: docker build -t myusername/myproject:latest .
+        run: docker build -t $IMAGE_TAG .
 
       - name: Push Docker Image to Docker Hub
-        run: docker push codeiddih/my-static-site:latest
+        run: |
+          docker push $IMAGE_TAG
+          docker tag $IMAGE_TAG codeiddih/my-static-site:latest
+          docker push codeiddih/my-static-site:latest
